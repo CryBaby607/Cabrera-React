@@ -96,17 +96,7 @@ const Footer = () => {
               Información
             </h4>
             <ul className="space-y-4">
-              <li className="flex items-start space-x-3">
-                <span className="text-xl mt-1">⏰</span>
-                <div>
-                  <p className="text-sm text-gray-500">
-                    Horario de atención
-                  </p>
-                  <p className="text-gray-300 font-medium">
-                    24 horas, 365 días
-                  </p>
-                </div>
-              </li>
+
               <li>
                 <a 
                   href="#" 
@@ -141,9 +131,6 @@ const Footer = () => {
             <p className="text-gray-500 text-sm">
               © {businessInfo.foundingYear}-{currentYear} {businessInfo.name}. 
               Todos los derechos reservados.
-            </p>
-            <p className="text-gray-500 text-sm">
-              Sitio diseñado con respeto y sensibilidad.
             </p>
           </div>
         </div>

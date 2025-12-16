@@ -64,31 +64,3 @@ export const processSteps = [
     description: "Estamos contigo durante todo el proceso, brindando apoyo y respeto en cada momento."
   }
 ];
-
-export const stats = [
-  {
-    id: 1,
-    value: "35+",
-    label: "Años de experiencia"
-  },
-  {
-    id: 2,
-    value: "24/7",
-    label: "Atención permanente"
-  },
-  {
-    id: 3,
-    value: "100%",
-    label: "Compromiso humano"
-  }
-];
-
-export const testimonials = [
-  {
-    id: 1,
-    name: "Familia González",
-    date: "Junio 2023",
-    text: "En nuestro momento más difícil, nos brindaron apoyo, claridad y sobre todo, mucho respeto. Su profesionalismo y sensibilidad hicieron que todo el proceso fuera más llevadero.",
-    rating: 5
-  }
-];
