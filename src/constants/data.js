@@ -1,6 +1,6 @@
 export const businessInfo = {
   name: "Funeraria Cabrera",
-  foundingYear: 1985,
+  foundingYear: 2015,
   phone: "+525512345678",
   whatsapp: "+5211234567890",
   email: "contacto@funerariacabrera.com",
