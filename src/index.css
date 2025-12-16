@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-gray-700 bg-gray-50;
+  }
+}
+
+@layer components {
+  .image-loading {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+  }
+  
+  .underline-elegant {
+    @apply relative inline-block;
+  }
+  
+  .underline-elegant::after {
+    @apply content-[''] absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-amber-500 to-transparent scale-x-0 transition-transform duration-300;
+  }
+  
+  .underline-elegant:hover::after {
+    @apply scale-x-100;
+  }
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes pulse-whatsapp {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.whatsapp-pulse {
+  animation: pulse-whatsapp 2s infinite;
+}
