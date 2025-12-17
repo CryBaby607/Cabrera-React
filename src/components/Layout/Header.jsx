@@ -33,27 +33,13 @@ const Header = () => {
                 {businessInfo.name}
               </h1>
               <p className="text-sm text-gray-600">
-                Desde {businessInfo.foundingYear}
+                {businessInfo.tagline}
               </p>
             </div>
           </a>
-          
-          {/* Botón de Hamburguesa (Solo visible en pantallas pequeñas) */}
-          <button 
-            className="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 transition-colors duration-200"
-            onClick={toggleMenu}
-            aria-label="Toggle navigation menu"
-          >
-            {/* Ícono de hamburguesa o X */}
-            {isMenuOpen ? (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            ) : (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-            )}
-          </button>
 
-          {/* Navegación Principal (Escritorio) */}
-          <nav className="hidden md:flex space-x-8">
+          {/* Menú Principal (Solo Desktop) */}
+          <nav className="hidden md:flex items-center space-x-6">
             <a 
               href="#servicios" 
               className="text-gray-700 hover:text-amber-600 font-medium transition-colors duration-200 text-lg underline-elegant"
@@ -67,18 +53,26 @@ const Header = () => {
               Proceso
             </a>
             <a 
-              href="#confianza" 
-              className="text-gray-700 hover:text-amber-600 font-medium transition-colors duration-200 text-lg underline-elegant"
-            >
-              Confianza
-            </a>
-            <a 
               href="#contacto" 
               className="text-gray-700 hover:text-amber-600 font-medium transition-colors duration-200 text-lg underline-elegant"
             >
               Contacto
             </a>
           </nav>
+
+          {/* Botón de Menú Hamburguesa (Solo Móvil) */}
+          <button 
+            className="md:hidden p-2 text-gray-700 hover:text-amber-600 transition-colors duration-200" 
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            )}
+          </button>
+          
         </div>
       </div>
 
@@ -100,13 +94,6 @@ const Header = () => {
             className="block text-gray-800 hover:text-amber-600 hover:bg-gray-50 py-2 px-3 rounded-md font-medium transition-colors duration-200"
           >
             Proceso
-          </a>
-          <a 
-            href="#confianza" 
-            onClick={closeMenu} 
-            className="block text-gray-800 hover:text-amber-600 hover:bg-gray-50 py-2 px-3 rounded-md font-medium transition-colors duration-200"
-          >
-            Confianza
           </a>
           <a 
             href="#contacto" 
